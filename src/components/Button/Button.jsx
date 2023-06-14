@@ -1,10 +1,11 @@
 import React from "react";
 import "./Button.scss";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Button = (props) => {
 	return (
 		<>
-			<a href={props.link}>
+			<Link to={props.link}>
 				<button class="blob-btn">
 					{props.text}
 					<span class="blob-btn__inner">
@@ -16,7 +17,7 @@ const Button = (props) => {
 						</span>
 					</span>
 				</button>
-			</a>
+			</Link>
 
 			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 				<defs>

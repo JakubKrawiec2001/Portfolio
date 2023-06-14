@@ -97,7 +97,8 @@ const Header = ({ cursorPositon }) => {
 					}}>
 					{"</H1>"}
 				</span>
-				<Button text={"My Works"} link={"#projects"}></Button>
+
+				<Button text={"My Works"} link={"/#projects"}></Button>
 			</div>
 
 			<div className="socials-box">

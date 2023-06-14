@@ -12,7 +12,6 @@ import sass from "../../assets/images/sass.png";
 import js from "../../assets/images/js.png";
 import react from "../../assets/images/react.png";
 import bootstrap from "../../assets/images/bootstrap.png";
-import { Link } from "react-router-dom";
 
 const About = () => {
 	return (
@@ -67,9 +66,9 @@ const About = () => {
 								<p className="skill-name">Bootstrap</p>
 							</div>
 						</div>
-						<Link to="/more-about" className="about-btn">
-							<Button text={"More Details"}></Button>
-						</Link>
+						<div className="about-btn">
+							<Button text={"More Details"} link={"/more-about"}></Button>
+						</div>
 					</div>
 				</div>
 			</div>
