@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Nav.scss";
 import { HashLink as Link } from "react-router-hash-link";
+import resume from "../../assets/files/Resume.pdf"
 
 const Nav = () => {
 	const [open, setOpen] = useState(false);
@@ -27,9 +28,9 @@ const Nav = () => {
 						onClick={() => setOpen(!open)}>
 						My Works
 					</Link>
-					<Link to="/" className="menu-text" onClick={() => setOpen(!open)}>
+					<a href={resume} className="menu-text" onClick={() => setOpen(!open)}>
 						My Resume
-					</Link>
+					</a>
 				</div>
 				<div className="menu-contact">
 					<p className="menu-contact-title">TEXT ME</p>
