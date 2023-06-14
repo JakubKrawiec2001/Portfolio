@@ -1,0 +1,273 @@
+@use "../../colors" as *;
+.contact {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $pink;
+	.contact-icon {
+		display: none;
+	}
+
+	.contact-heading {
+		padding: 0.5em;
+		font-size: 4rem;
+		color: $yellow;
+		text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1),
+			0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1),
+			0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1),
+			0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1),
+			-0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+	}
+	form {
+		position: relative;
+		height: 70%;
+		width: 90%;
+		background-color: $yellow;
+		border-radius: 10px;
+		border: 4px solid black;
+		box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+		.form-body {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 1.5em;
+			height: 100%;
+			width: 80%;
+
+			label {
+				font-size: 1.4rem;
+				font-weight: bold;
+			}
+			input {
+				padding: 0.5em;
+				width: 100%;
+				background: none;
+				border-radius: 10px;
+				border: 4px solid black;
+				color: $pink;
+				font-size: 1.4rem;
+			}
+			textarea {
+				padding: 1em;
+				max-width: 100%;
+				max-height: 30%;
+				background: none;
+				border-radius: 10px;
+				border: 4px solid black;
+				color: $pink;
+				font-size: 1.4rem;
+			}
+			.contact-btn {
+				padding: 0.5em;
+				font-size: 2rem;
+				background-color: $pink;
+				color: $yellow;
+				font-weight: bold;
+				cursor: pointer;
+				transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+			}
+			.contact-btn:hover {
+				scale: 0.98;
+			}
+		}
+	}
+}
+
+@media (min-width: 414px) {
+	.contact {
+		form {
+			.form-body {
+				gap: 2em;
+				label {
+					padding-top: 0.5em;
+					font-size: 2.6rem;
+				}
+				input {
+					padding: 1em;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.contact {
+		.contact-icon {
+			display: block;
+			position: absolute;
+			font-size: 6rem;
+			color: $yellow;
+		}
+		.contact-icon:nth-child(1) {
+			bottom: 15%;
+			right: 10%;
+			font-size: 5rem;
+		}
+		.contact-icon:nth-child(2) {
+			top: 10%;
+			right: 15%;
+			rotate: 10deg;
+		}
+		.contact-icon:nth-child(3) {
+			left: 10%;
+			top: 5%;
+			font-size: 3rem;
+		}
+		.contact-icon:nth-child(4) {
+			left: 13%;
+			bottom: 35%;
+		}
+		.contact-icon:nth-child(5) {
+			right: 20%;
+			bottom: 5%;
+			font-size: 5rem;
+		}
+		.contact-icon:nth-child(6) {
+			left: 5%;
+			top: 30%;
+			rotate: 10deg;
+		}
+		.contact-icon:nth-child(7) {
+			right: 31%;
+			top: 40%;
+			font-size: 3rem;
+		}
+		.contact-icon:nth-child(8) {
+			right: 17%;
+			bottom: 45%;
+		}
+		.contact-icon:nth-child(9) {
+			left: 25%;
+			bottom: 55%;
+			rotate: 10deg;
+		}
+		.contact-icon:nth-child(10) {
+			right: 30%;
+			top: 3%;
+			font-size: 5rem;
+		}
+		.contact-icon:nth-child(11) {
+			left: 30%;
+			bottom: 10%;
+			rotate: -10deg;
+		}
+		.contact-icon:nth-child(12) {
+			left: 30%;
+			top: 10%;
+		}
+		.contact-icon:nth-child(13) {
+			left: 20%;
+			bottom: 20%;
+			font-size: 3rem;
+		}
+		.contact-icon:nth-child(14) {
+			right: 2%;
+			bottom: 55%;
+			rotate: -10deg;
+		}
+		.contact-icon:nth-child(15) {
+			left: 1%;
+			bottom: 40%;
+			font-size: 5rem;
+		}
+		.contact-icon:nth-child(16) {
+			right: 32.5%;
+			bottom: 23%;
+			rotate: -10deg;
+		}
+		.contact-icon:nth-child(17) {
+			left: 5%;
+			bottom: 6%;
+			font-size: 3rem;
+		}
+		.contact-heading {
+			font-size: 6rem;
+		}
+		form {
+			width: 70%;
+			height: 60%;
+			.form-body {
+				gap: 2em;
+				label {
+					font-size: 3rem;
+				}
+				input {
+					padding: 1em;
+					font-size: 2rem;
+				}
+				.contact-btn {
+					font-size: 2.6rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.contact {
+		.contact-heading {
+			font-size: 7rem;
+		}
+		form {
+			width: 60%;
+			height: 55%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact {
+		.contact-heading {
+			padding: 0.5em;
+			font-size: 8rem;
+		}
+		form {
+			height: 75%;
+			width: 30%;
+
+			.form-body {
+				gap: 3em;
+				height: 100%;
+				width: 80%;
+
+				label {
+					font-size: 3rem;
+					font-weight: bold;
+				}
+				input {
+					padding: 1.2em;
+					font-size: 2rem;
+				}
+				textarea {
+					padding: 1em;
+					font-size: 2rem;
+				}
+				.contact-btn {
+					padding: 0.5em;
+					font-size: 4rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 2000px) {
+	.contact {
+		form {
+			height: 70%;
+			.form-body {
+				gap: 3.6em;
+				label {
+					font-size: 3.4rem;
+				}
+				input {
+					padding: 1.6em;
+				}
+			}
+		}
+	}
+}

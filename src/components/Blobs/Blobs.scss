@@ -1,0 +1,59 @@
+@use "../../colors" as *;
+
+.blob-right {
+	position: absolute;
+	right: -18%;
+	bottom: 0;
+	width: 40%;
+	rotate: -45deg;
+	fill: $pink;
+	z-index: 1;
+}
+.blob-right-shade {
+	position: absolute;
+	right: -20%;
+	bottom: -2%;
+	width: 45%;
+	rotate: -45deg;
+	fill: $shapes-shadow;
+}
+
+.blob-left {
+	position: absolute;
+	bottom: 8%;
+	left: -10%;
+	width: 30%;
+	fill: $pink;
+	z-index: 1;
+}
+.blob-left-shade {
+	position: absolute;
+	bottom: 6%;
+	left: -12%;
+	width: 35%;
+	fill: $shapes-shadow;
+}
+
+@media (min-width: 1200px) {
+	.blob-right {
+		right: -18%;
+		bottom: -38%;
+		width: 40%;
+	}
+	.blob-right-shade {
+		right: -20%;
+		bottom: -44%;
+		width: 45%;
+	}
+
+	.blob-left {
+		bottom: -17%;
+		left: 0;
+		width: 20%;
+	}
+	.blob-left-shade {
+		bottom: -15%;
+		left: 0;
+		width: 20%;
+	}
+}

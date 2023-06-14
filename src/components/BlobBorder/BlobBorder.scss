@@ -1,0 +1,53 @@
+@use "../../colors" as *;
+
+.blob-border-one {
+	position: absolute;
+	top: -2%;
+	left: 15%;
+	width: 70%;
+	z-index: 1;
+}
+.blob-border-two {
+	position: absolute;
+	top: -2%;
+	left: 16%;
+	width: 71%;
+	z-index: 0;
+}
+
+@media (min-width: 768px) {
+	.blob-border-one {
+		left: 20%;
+		width: 60%;
+	}
+	.blob-border-two {
+		left: 21%;
+		width: 61%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.blob-border-one {
+		top: 17%;
+		left: -5%;
+		width: 40%;
+	}
+	.blob-border-two {
+		top: 17%;
+		left: -5%;
+		width: 41%;
+	}
+}
+
+@media (min-width: 2000px) {
+	.blob-border-one {
+		width: 50%;
+		top: 14%;
+		left: -8%;
+	}
+	.blob-border-two {
+		width: 50%;
+		top: 15%;
+		left: -7%;
+	}
+}

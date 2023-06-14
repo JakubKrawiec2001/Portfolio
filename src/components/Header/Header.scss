@@ -1,0 +1,261 @@
+@use "../../colors" as *;
+.header {
+	position: relative;
+	overflow: hidden;
+
+	.tag-span {
+		position: absolute;
+		font-size: 2.4rem;
+		color: $pink;
+	}
+	.tag-span-p-open {
+		top: 40%;
+		right: 8%;
+		transform: translate(0, 0);
+	}
+	.tag-span-p-close {
+		top: 15%;
+		left: 30%;
+	}
+	.tag-span-br {
+		bottom: 30%;
+		left: 30%;
+		font-size: 2rem;
+	}
+	.tag-span-hr {
+		bottom: 20%;
+		right: 30%;
+	}
+	.tag-span-open {
+		top: 25%;
+		right: 40%;
+		font-size: 3.6rem;
+	}
+	.tag-span-close {
+		left: 5%;
+		bottom: 35%;
+		font-size: 3rem;
+	}
+	.drop {
+		position: absolute;
+		margin: 175px auto;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		margin: 0 auto;
+		background: $pink;
+		border-radius: 23px;
+		animation-name: drip;
+		animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+		animation-iteration-count: infinite;
+	}
+	.drop-one {
+		left: 50%;
+		animation-duration: 6s;
+	}
+
+	.drop-two {
+		left: 10%;
+		animation-duration: 3s;
+	}
+	.drop-three {
+		top: -10%;
+		left: 30%;
+		animation-duration: 5s;
+	}
+	.drop-four {
+		right: 10%;
+		animation-duration: 8s;
+	}
+	.drop:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		border-bottom: 35px solid rgba(254, 58, 74, 1);
+		top: -22px;
+	}
+	.heading-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10em;
+		height: 100%;
+
+		.heading-text {
+			font-size: 2rem;
+			color: $pink;
+			text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1),
+				0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1),
+				0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1),
+				0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1),
+				-0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+		}
+		.heading-text-span {
+			font-size: 1.6rem;
+		}
+		.heading-name {
+			font-size: 4rem;
+			color: $pink;
+			text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1),
+				0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1),
+				0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1),
+				0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1),
+				-0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+			animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+				infinite alternate;
+		}
+		.h1-span-one {
+			position: absolute;
+			top: 35%;
+			left: 10%;
+			font-size: 2rem;
+			color: $pink;
+		}
+		.h1-span-two {
+			position: absolute;
+			right: 10%;
+			bottom: 35%;
+			font-size: 2rem;
+			color: $pink;
+		}
+	}
+	.socials-box {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		gap: 3em;
+		height: 100%;
+		width: 100%;
+
+		.social-icon {
+			font-size: 3rem;
+			color: $pink;
+			transition: all 0.4s ease-in-out;
+			animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+				infinite alternate;
+		}
+		.social-icon:hover {
+			padding-bottom: 0.5em;
+			scale: 1.5;
+		}
+	}
+}
+
+@media (min-width: 414px) {
+	.header {
+		.heading-box {
+			.heading-text {
+				font-size: 2.6rem;
+				.heading-text-span {
+					font-size: 2rem;
+				}
+			}
+			.heading-name {
+				font-size: 5rem;
+			}
+		}
+		.socials-box {
+			.social-icon {
+				font-size: 4rem;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.header {
+		.heading-box {
+			.heading-text {
+				font-size: 4rem;
+				.heading-text-span {
+					font-size: 3rem;
+				}
+			}
+			.heading-name {
+				font-size: 7.4rem;
+			}
+			.h1-span-one {
+				font-size: 3rem;
+			}
+			.h1-span-two {
+				font-size: 3rem;
+			}
+		}
+		.socials-box {
+			.social-icon {
+				font-size: 6.4rem;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.header {
+		.heading-box {
+			.heading-text {
+				font-size: 5.6rem;
+				.heading-text-span {
+					font-size: 4.4rem;
+				}
+			}
+			.heading-name {
+				font-size: 10rem;
+			}
+		}
+		.socials-box {
+			.social-icon {
+				font-size: 7rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.header {
+		.heading-box {
+			.heading-text {
+				font-size: 6rem;
+			}
+			.heading-text-span {
+				font-size: 5rem;
+			}
+			.heading-name {
+				font-size: 12em;
+			}
+			.h1-span-one {
+				top: 40%;
+				left: 20%;
+			}
+			.h1-span-two {
+				right: 20%;
+				bottom: 40%;
+			}
+		}
+		.socials-box {
+			.social-icon {
+				font-size: 5rem;
+			}
+		}
+	}
+}
+
+// ANIMATIONS
+@keyframes bop {
+	0% {
+		transform: scale(0.9);
+	}
+	50%,
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes drip {
+	to {
+		top: 100%;
+	}
+}

@@ -1,0 +1,214 @@
+@use "../../colors" as *;
+
+.project-box {
+	position: relative;
+	width: 100%;
+	height: 70%;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	border: 4px solid black;
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+	z-index: 1;
+	transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+	cursor: pointer;
+	overflow: hidden;
+
+	.project-img {
+		width: 100%;
+		height: 100%;
+		transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+	}
+
+	.project-number {
+		position: absolute;
+		bottom: 70%;
+		right: 3%;
+		font-size: 3rem;
+		font-weight: bold;
+		color: $white;
+		transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+		opacity: 1;
+		z-index: 1;
+	}
+
+	.project-name {
+		position: absolute;
+		bottom: 5%;
+		left: 5%;
+		font-weight: 400;
+		font-size: 1.4rem;
+		color: $white;
+		color: $yellow;
+		transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+		opacity: 1;
+		z-index: 1;
+	}
+}
+
+.project-box::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+	z-index: 1;
+}
+
+.project-box:hover {
+	box-shadow: 5px 5px 0px 0px rgba($pink, 1);
+	border: 4px solid $pink;
+	.project-img {
+		scale: 1.1;
+	}
+	.project-number {
+		opacity: 1;
+		bottom: 75%;
+		z-index: 1;
+	}
+	.project-name {
+		opacity: 1;
+		scale: 1.1;
+		bottom: 5%;
+	}
+}
+
+.project-box:hover::before {
+	opacity: 1;
+}
+
+.projects {
+	height: 100vh;
+
+	.projects-heading {
+		padding-top: 2em;
+		text-align: center;
+		font-size: 3.4rem;
+		color: $pink;
+		text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1),
+			0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1),
+			0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1),
+			0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1),
+			-0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+	}
+	.projects-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+		margin: 0 auto;
+		width: 95%;
+		height: 85%;
+
+		.projects-row-one {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 1em;
+			width: 100%;
+			height: 80%;
+		}
+
+		.projects-row-two {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 1em;
+			width: 100%;
+			height: 80%;
+		}
+	}
+}
+
+@media (min-width: 414px) {
+	.project-box {
+		.project-name {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.project-box {
+		.project-number {
+			font-size: 4rem;
+		}
+		.project-name {
+			font-size: 3rem;
+		}
+	}
+	.projects {
+		.projects-heading {
+			font-size: 5rem;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.projects {
+		.projects-heading {
+			font-size: 6rem;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.project-box {
+		width: 30%;
+		height: 30vh;
+		.project-number {
+			bottom: 0;
+			right: 3%;
+			font-size: 6rem;
+			opacity: 0;
+		}
+
+		.project-name {
+			bottom: 0;
+			opacity: 0;
+		}
+	}
+
+	.project-box::before {
+		opacity: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.projects {
+		.projects-heading {
+			padding-top: 0.5em;
+			font-size: 8rem;
+		}
+		.projects-container {
+			flex-direction: column;
+			gap: 2em;
+			margin-top: 3em;
+			.projects-row-one {
+				flex-direction: row;
+				align-items: flex-end;
+				gap: 2em;
+				height: 50%;
+			}
+
+			.projects-row-two {
+				flex-direction: row;
+				align-items: flex-start;
+				gap: 2em;
+				height: 50%;
+			}
+		}
+	}
+}
+
+@media (min-width: 2000px) {
+	.project-box:hover {
+		.project-number {
+			bottom: 80%;
+		}
+	}
+}
