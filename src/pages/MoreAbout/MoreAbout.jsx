@@ -90,13 +90,13 @@ const MoreAbout = () => {
 						start my master's studies at the University of Applied Informatics
 						where I will be able to expand my knowledge of programming, which I
 						can't wait for. In my work, I follow the principle of mobile first.
-						I create websites so that they are responsive and adapted to each
-						user. I am currently familiar with Html, Css, Sass, JavaScript and
-						React. I also worked with Bootstrap. TypeScript is next on my list.
-						In the the future i would like to learn more technologies. I love to
-						gain new knowledge and I treat programming as fun thanks to which I
-						can experiment with new technologies. I'd love to tell you more
-						about myself next time we meet.
+						I create responsive websites and adapted to each user. I am
+						currently familiar with Html, Css, Sass, JavaScript and React. I
+						also worked with Bootstrap. TypeScript is next on my list. In the
+						the future i would like to learn more technologies. I love to gain
+						new knowledge and I treat programming as fun thanks to which I can
+						experiment with new technologies. I'd love to tell you more about
+						myself next time we meet.
 					</p>
 				</div>
 			</div>
